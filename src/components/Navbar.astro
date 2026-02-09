@@ -1,3 +1,8 @@
+---
+// Feature flag: Set to true to enable merch features
+const MERCH_ENABLED = false;
+---
+
 <!-- Desktop Navbar (hidden on mobile) -->
 <nav class="hidden lg:flex items-center justify-between px-6 py-4 lg:px-8 bg-[#fffb] backdrop-blur-md fixed top-0 inset-x-0 z-40" aria-label="Global">
   <!-- Logo -->
@@ -33,7 +38,7 @@
   </div>
   <!-- Right-aligned items -->
   <div class="lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-x-4">
-    <a href="/merch" class="merch-button">MERCH</a>
+    {MERCH_ENABLED && <a href="/merch" class="merch-button">MERCH</a>}
     <a href="/contact" class="text-sm font-semibold text-gray-900 transition-colors transition-transform duration-200 hover:text-purple-600 hover:scale-110">Contact Us</a>
   </div>
 </nav>
