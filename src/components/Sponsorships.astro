@@ -1,74 +1,252 @@
 <div class="bg-white py-24 sm:py-32">
   <div class="relative isolate px-6 pt-14 lg:px-8">
-    <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
-      <div class="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-linear-to-tr from-[#f5b100] to-[#e04552] opacity-50 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+    <div
+      class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+      aria-hidden="true"
+    >
+      <div
+        class="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-linear-to-tr from-[#f5b100] to-[#e04552] opacity-50 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+        style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+      ></div>
     </div>
 
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <h2 class="text-center text-lg/8 font-semibold text-gray-900">Proudly sponsored by</h2>
-    <!-- <div class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5"> -->
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <h2 class="text-center text-lg/8 font-semibold text-gray-900">Proudly sponsored by</h2>
+
       <section data-tier class="mt-16">
         <h3 class="text-center text-2xl font-bold text-gray-800">Gold</h3>
-        <div class="mx-auto mt-6 grid max-w-lg grid-cols-2 gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-3 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+        <div class="mx-auto mt-6 flex justify-center">
           <a
             href="https://www.atlassian.com/"
             target="_blank"
             rel="noopener noreferrer"
-            class="flex items-center justify-center col-span-2 sm:col-span-3 lg:col-span-4 justify-self-center"
+            class="sponsor-slot sponsor-slot-gold"
           >
-            <img class="max-h-8 w-auto object-contain transition-transform duration-300 ease-in-out hover:scale-105" src="/icons/atlassian.png" alt="Atlassian" width="158" height="48" />
+            <img
+              class="sponsor-logo logo-atlassian"
+              src="/icons/atlassian.png"
+              alt="Atlassian"
+              width="300"
+              height="80"
+            />
           </a>
         </div>
       </section>
 
       <section data-tier class="mt-16">
         <h3 class="text-center text-2xl font-bold text-gray-800">Silver</h3>
-        <div class="mx-auto mt-6 grid max-w-lg grid-cols-2 gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-3 lg:mx-0 lg:max-w-none lg:grid-cols-4">
-          <a href="https://www.janestreet.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center">
-            <img class="max-h-12 w-auto object-contain transition-transform duration-300 ease-in-out hover:scale-105" src="/icons/janest.png" alt="Jane Street" width="158" height="48">
+        <div class="mx-auto mt-6 flex max-w-5xl flex-wrap items-center justify-center gap-x-20 gap-y-10">
+          <a
+            href="https://www.janestreet.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="sponsor-slot"
+          >
+            <img
+              class="sponsor-logo logo-janestreet"
+              src="/icons/janest.png"
+              alt="Jane Street"
+              width="210"
+              height="56"
+            />
           </a>
 
-          <a href="https://www.quantium.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center">
-            <img class="max-h-12 w-auto object-contain transition-transform duration-300 ease-in-out hover:scale-105" src="/icons/quantium.svg" alt="Quantium" width="158" height="48">
+          <a
+            href="https://www.quantium.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="sponsor-slot"
+          >
+            <img
+              class="sponsor-logo logo-quantium"
+              src="/icons/quantium.svg"
+              alt="Quantium"
+              width="215"
+              height="56"
+            />
           </a>
 
-          <a href="https://www.allianz.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center">
-            <img class="max-h-12 w-auto object-contain transition-transform duration-300 ease-in-out hover:scale-105" src="/icons/allianz.png" alt="Allianz" width="158" height="48">
+          <a
+            href="https://www.allianz.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="sponsor-slot"
+          >
+            <img
+              class="sponsor-logo logo-allianz"
+              src="/icons/allianz.png"
+              alt="Allianz"
+              width="220"
+              height="56"
+            />
           </a>
         </div>
       </section>
 
       <section data-tier class="mt-16">
         <h3 class="text-center text-2xl font-bold text-gray-800">Bronze</h3>
-        <div class="mx-auto mt-6 grid max-w-lg grid-cols-2 gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-3 lg:mx-0 lg:max-w-none lg:grid-cols-4">
-          <a href="https://www.sig.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center">
-            <img class="max-h-12 w-auto object-contain transition-transform duration-300 ease-in-out hover:scale-105" src="/icons/sig.svg" alt="SIG" width="158" height="48">
+        <div class="mx-auto mt-6 grid max-w-5xl grid-cols-1 place-items-center gap-x-12 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+          <a
+            href="https://www.sig.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="sponsor-slot"
+          >
+            <img
+              class="sponsor-logo logo-susquehanna"
+              src="/icons/susquehanna.png"
+              alt="Susquehanna"
+              width="200"
+              height="56"
+            />
           </a>
 
-          <a href="https://www.imc.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center">
-            <img class="max-h-12 w-auto object-contain transition-transform duration-300 ease-in-out hover:scale-105" src="/icons/imc.svg" alt="IMC" width="158" height="48">
+          <a
+            href="https://www.imc.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="sponsor-slot"
+          >
+            <img
+              class="sponsor-logo logo-imc"
+              src="/icons/imc.svg"
+              alt="IMC"
+              width="205"
+              height="56"
+            />
           </a>
 
-          <a href="https://www.vivcourt.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center">
-            <img class="max-h-12 w-auto object-contain transition-transform duration-300 ease-in-out hover:scale-105" src="/icons/vivcourt.svg" alt="Vivcourt Trading" width="158" height="48">
+          <a
+            href="https://www.vivcourt.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="sponsor-slot"
+          >
+            <img
+              class="sponsor-logo logo-vivcourt"
+              src="/icons/viv.png"
+              alt="Vivcourt Trading"
+              width="210"
+              height="56"
+            />
           </a>
 
-          <a href="https://www.bcg.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center">
-            <img class="max-h-12 w-auto object-contain transition-transform duration-300 ease-in-out hover:scale-105" src="/icons/BGG-Logo.png" alt="BCG" width="158" height="48">
+          <a
+            href="https://www.bcg.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="sponsor-slot"
+          >
+            <img
+              class="sponsor-logo logo-bcg"
+              src="/icons/BGG-Logo.png"
+              alt="BCG"
+              width="215"
+              height="56"
+            />
           </a>
 
-          <a href="https://dataarmy.io/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center">
-            <img class="max-h-12 w-auto object-contain transition-transform duration-300 ease-in-out hover:scale-105" src="/icons/data army .png" alt="Data Army" width="158" height="48">
+          <a
+            href="https://dataarmy.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="sponsor-slot"
+          >
+            <img
+              class="sponsor-logo logo-dataarmy"
+              src="/icons/data army .png"
+              alt="Data Army"
+              width="195"
+              height="56"
+            />
           </a>
 
-          <a href="https://www.accenture.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center">
-            <img class="max-h-12 w-auto object-contain transition-transform duration-300 ease-in-out hover:scale-105" src="/icons/accenture.svg" alt="Accenture" width="158" height="48">
+          <a
+            href="https://www.accenture.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="sponsor-slot"
+          >
+            <img
+              class="sponsor-logo logo-accenture"
+              src="/icons/accenture.svg"
+              alt="Accenture"
+              width="205"
+              height="56"
+            />
           </a>
         </div>
       </section>
 
       <style>
-        /* Scroll-in animation for each tier block */
+        .sponsor-slot {
+          width: 240px;
+          height: 88px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .sponsor-slot-gold {
+          width: 360px;
+          height: 110px;
+        }
+
+        .sponsor-logo {
+          width: auto;
+          height: auto;
+          max-width: 205px;
+          max-height: 56px;
+          object-fit: contain;
+          transition: transform 300ms ease-in-out;
+        }
+
+        .sponsor-slot:hover .sponsor-logo {
+          transform: scale(1.05);
+        }
+
+      .logo-atlassian {
+        max-width: none;
+        max-height: none;
+        width: 300px;
+        height: auto;
+      }
+
+      .logo-janestreet {
+        max-width: none;
+        max-height: none;
+        width: 225px;
+        height: auto;
+      }
+
+      .logo-quantium {
+        max-width: none;
+        max-height: none;
+        width: 230px;
+        height: auto;
+      }
+
+      .logo-allianz {
+        max-width: none;
+        max-height: none;
+        width: 210px;
+        height: auto;
+      }
+
+      .logo-vivcourt {
+        max-width: none;
+        max-height: none;
+        width: 150px;
+        height: auto;
+      }
+
+      .logo-bcg {
+        max-width: none;
+        max-height: none;
+        width: 200px;
+        height: auto;
+      }
+
         [data-tier] {
           opacity: 0;
           transform: translateY(18px) scale(0.98);
@@ -87,7 +265,6 @@
           const tierEls = document.querySelectorAll('[data-tier]');
           if (!tierEls.length) return;
 
-          // If a tier is already visible on first render, reveal it immediately.
           tierEls.forEach((el) => {
             const rect = el.getBoundingClientRect();
             const inViewport = rect.top < window.innerHeight && rect.bottom > 0;
@@ -107,7 +284,6 @@
                 observer.unobserve(entry.target);
               }
             },
-            // Low threshold so small sections (like single-logo Gold) still trigger.
             { threshold: 0.01, rootMargin: '0px 0px -5% 0px' }
           );
 
@@ -116,8 +292,16 @@
           });
         })();
       </script>
-      <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
-        <div class="relative left-[calc(50%+20rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 bg-linear-to-tr from-[#129bd0] to-[#e04552] opacity-90 sm:left-[calc(50%+50rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-      </div> 
+
+      <div
+        class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+        aria-hidden="true"
+      >
+        <div
+          class="relative left-[calc(50%+20rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 bg-linear-to-tr from-[#129bd0] to-[#e04552] opacity-90 sm:left-[calc(50%+50rem)] sm:w-[72.1875rem]"
+          style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+        ></div>
+      </div>
+    </div>
   </div>
 </div>
