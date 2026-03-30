@@ -2,6 +2,9 @@ backend:
   name: github
   repo: UNSW-Data-Soc/enchantment
   branch: main
+  site_domain: https://unswdata.com
+  base_url: https://unswdata.com
+  auth_endpoint: "/api/auth"
 
 publish_mode: editorial_workflow 
 media_folder: "src/assets/images" # Location where files will be stored in the repo
