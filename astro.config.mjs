@@ -9,6 +9,12 @@ import react from "@astrojs/react"
 export default defineConfig({
   output: "static",
 
+  adapter: cloudflare({
+    platformProxy: {
+      enabled: true,
+    },
+  }),
+
   site: 'https://unsw-data-soc.github.io',
   base: '/',
 
