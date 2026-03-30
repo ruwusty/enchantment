@@ -5,15 +5,13 @@ import cloudflare from "@astrojs/cloudflare";
 import alpinejs from "@astrojs/alpinejs";
 import react from "@astrojs/react"
 
+import netlify from "@astrojs/netlify";
+
 // https://astro.build/config
 export default defineConfig({
   output: "static",
 
-  adapter: cloudflare({
-    platformProxy: {
-      enabled: true,
-    },
-  }),
+  adapter: netlify(),
 
   site: 'https://unsw-data-soc.github.io',
   base: '/',
