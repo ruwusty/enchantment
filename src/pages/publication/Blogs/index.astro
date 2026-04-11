@@ -1,25 +1,71 @@
 ---
+import { getCollection } from 'astro:content';
 import Container from '../../../components/Container.astro';
 import Header from '../../../components/Header.astro';
 import Layout from '../../../layouts/Layout.astro';
-import Blogs from '../../../pages/publication/Blogs/Blogs.tsx';
+
+const posts = (await getCollection('blogs', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+function formatDate(date: Date) {
+  return date.toLocaleDateString('en-AU', { year: 'numeric', month: 'long', day: 'numeric' });
+}
 ---
 
-<Layout title="Blogs - UNSW Data Science Society">
-    <Header>
-        <h1>Blogs
-        </h1>
-        <p>
-        Welcome to DataSoc's blog collection — your go-to space for thought-provoking insights, tips, and trends in the world of data science. Whether you're curious about machine learning, ethics, visualisation, or how data science affects your everyday life, we've got something for you.
-        </p>
+<Layout title="Blogs - UNSW DataSoc">
+  <Header>
+    <h1>Blogs</h1>
+    <p>
+      Welcome to DataSoc's blog — your go-to space for thought-provoking insights, tips, and trends
+      in data science. From machine learning to ethics, visualisation to careers, written by students for students.
+    </p>
+  </Header>
 
-        <p>
-        Discover student-written articles, community updates, and expert breakdowns that help you make sense of the data-driven world — all in one place.
-        </p>
-    </Header>
-
-    <Container class="space-y-6 py-6 max-w-3xl text-justify">
-        <Blogs client:only="react" />
-    </Container>
-
+  <Container class="py-10">
+    {posts.length === 0 ? (
+      <p class="text-center text-gray-400 py-24 text-lg">No posts yet — check back soon!</p>
+    ) : (
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {posts.map(post => (
+          <a
+            href={`/publication/Blogs/${post.id}`}
+            class="group flex flex-col bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+          >
+            {post.data.coverImage && (
+              <img
+                src={post.data.coverImage}
+                alt={post.data.title}
+                class="w-full h-48 object-cover"
+              />
+            )}
+            <div class="flex flex-col flex-1 p-5">
+              {post.data.tags && post.data.tags.length > 0 && (
+                <div class="flex flex-wrap gap-2 mb-3">
+                  {post.data.tags.map(tag => (
+                    <span class="text-xs px-2 py-1 bg-[#ffebe1] text-[#134f5c] rounded-full font-medium">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              )}
+              <h2 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#134f5c] transition-colors line-clamp-2 leading-snug">
+                {post.data.title}
+              </h2>
+              <p class="text-sm text-gray-500 line-clamp-3 mb-4 flex-1">
+                {post.data.description}
+              </p>
+              <div class="flex items-center gap-2 text-xs text-gray-400 mt-auto">
+                <div class="w-6 h-6 rounded-full bg-[#134f5c] flex items-center justify-center text-white font-bold text-xs shrink-0">
+                  {post.data.author.charAt(0)}
+                </div>
+                <span class="font-medium text-gray-600">{post.data.author}</span>
+                <span>·</span>
+                <span>{formatDate(post.data.date)}</span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    )}
+  </Container>
 </Layout>

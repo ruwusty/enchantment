@@ -13,6 +13,7 @@
   "dependencies": {
     "@astrojs/alpinejs": "^0.4.5",
     "@astrojs/cloudflare": "^12.2.1",
+    "@astrojs/mdx": "^4.3.14",
     "@astrojs/react": "^4.2.3",
     "@react-three/fiber": "^9.3.0",
     "@tailwindcss/vite": "^4.0.8",
