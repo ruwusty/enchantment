@@ -41,7 +41,7 @@ function formatDate(date: Date) {
     {post.data.tags && post.data.tags.length > 0 && (
       <div class="flex flex-wrap gap-2 mb-4">
         {post.data.tags.map(tag => (
-          <span class="text-xs px-2 py-1 bg-[#ffebe1] text-[#134f5c] rounded-full font-medium">
+          <span class="text-xs px-2 py-1 bg-[#134f5c] text-white rounded-full font-medium">
             {tag}
           </span>
         ))}
@@ -141,7 +141,7 @@ function formatDate(date: Date) {
     padding: 0;
   }
   .prose :global(blockquote) {
-    border-left: 4px solid #ffcd95;
+    border-left: 4px solid #134f5c;
     padding-left: 1.25rem;
     font-style: italic;
     color: #6b7280;
@@ -155,5 +155,15 @@ function formatDate(date: Date) {
   .prose :global(hr) {
     border-color: #e5e7eb;
     margin: 2rem 0;
+  }
+  .prose :global(figure) {
+    margin: 1.5rem 0;
+  }
+  .prose :global(figcaption) {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #9ca3af;
+    margin-top: 0.5rem;
+    line-height: 1.5;
   }
 </style>
