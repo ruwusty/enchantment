@@ -3,9 +3,8 @@ backend:
   repo: UNSW-Data-Soc/enchantment
   branch: edu-submissions
 
-publish_mode: editorial_workflow 
-media_folder: "src/assets/images" # Location where files will be stored in the repo
-public_folder: "/public/images" # The src attribute for uploaded media
+media_folder: "src/assets/images/blog" # Location where files will be stored in the repo
+public_folder: "/src/assets/images/blog" # The src attribute for uploaded media
 
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
