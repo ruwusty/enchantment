@@ -139,8 +139,11 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
 	/* IMAGES IN CONTENT */
 	:global(.prose img) {
-		margin: 2rem 0;
+		display: block;
+		margin: 2.5rem auto;
 		border-radius: 12px;
+		max-width: 100%;
+		height: auto;
 	}
 
 	/* MOBILE */
