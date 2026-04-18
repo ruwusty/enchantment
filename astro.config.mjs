@@ -15,7 +15,7 @@ export default defineConfig({
     },
   }),
 
-  site: 'https://unswdata.com',
+  site: 'https://unsw-data-soc.github.io',
   base: '/',
 
   vite: {
