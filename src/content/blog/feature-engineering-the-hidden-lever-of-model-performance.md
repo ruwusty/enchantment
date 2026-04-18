@@ -11,7 +11,7 @@ When students first learn machine learning, the focus is usually on models — l
 
 Feature engineering is the process of transforming raw data into representations that make learning easier for algorithms. It is a step often overlooked by beginners, but in real-world projects, this step determines whether a model succeeds or fails. By carefully creating new variables, handling missing values, or transforming data, we can dramatically improve model performance.
 
-![](/images/blog/merch_popup.jpg)
+![](/images/blog/blog-placeholder-1.jpg)
 
 ## Why Feature Engineering Matters
 
@@ -21,7 +21,7 @@ Imagine a simple regression problem. If you model a target `y` as a linear funct
 
 Good features provide signal, reduce noise, and sometimes even make it possible to use simpler models instead of complex ones. Poor features, by contrast, can leave even a high-performing model struggling.
 
-![](/images/blog/merch_popup.jpg)
+![](/images/blog/blog-placeholder-1.jpg)
 
 ## Common Feature Engineering Techniques
 
@@ -40,7 +40,7 @@ Missing data is more than just a nuisance; it often contains information. Common
 
 A critical risk in feature engineering is data leakage, where information from the test set or future data influences the training process. Leakage can occur through using global statistics to encode categories, creating rolling features that look ahead, or improperly scaling data before splitting it. The best practice is always to split your data first, then engineer features on the training set only, and validate carefully.
 
-![](/images/blog/merch_popup.jpg)
+![](/images/blog/blog-placeholder-1.jpg)
 
 ## Practical Workflow
 
@@ -50,7 +50,7 @@ A student-friendly workflow often begins with exploration: plotting distribution
 
 Dimensionality reduction techniques like Principal Component Analysis or autoencoders can compress features while retaining signal. Feature selection methods such as recursive feature elimination or L1 regularization can help reduce noise. Even in advanced settings, the core principle remains: better representations often trump more complex models.
 
-![](/images/blog/merch_popup.jpg)
+![](/images/blog/blog-placeholder-1.jpg)
 
 ## Final Thoughts
 

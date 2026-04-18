@@ -91,6 +91,15 @@ The blockquote element represents content that is quoted from another source, op
 | --------- | -------- | ------ |
 | _italics_ | **bold** | `code` |
 
+## In-line code
+`int *a = malloc(sizeof(int));`
+
+### Syntax
+
+```markdown
+`in-line code`
+```
+
 ## Code Blocks
 
 ### Syntax
@@ -212,3 +221,4 @@ X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
 Press <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>Delete</kbd> to end the session.
 
 Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
+
