@@ -4,7 +4,7 @@ title: 'Feature Engineering: The Hidden Lever of Model Performance'
 description: Feature engineering is the often-overlooked skill that can make or break a machine learning project. In this guide, we explore practical techniques for transforming raw data into meaningful features, handling missing values, avoiding data leakage, and iteratively improving model performance. Perfect for data science students looking to elevate their projects beyond just choosing the right algorithm.
 pubDate: 2026-04-18T14:34:00
 updatedDate: 2026-04-18T14:34:00
-heroImage: /src/assets/images/blog/Screenshot 2026-03-03 232925.png
+heroImage: /src/assets/images/blog/blog-placeholder-1.jpg
 ---
 
 When students first learn machine learning, the focus is usually on models — linear regression, decision trees, neural networks, or boosting methods. It is natural to think that the model is the most important part of any project. However, in practice, experienced data scientists know that **better features often beat better models**. The way we represent data can make or break a model, no matter how sophisticated it is.
