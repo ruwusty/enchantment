@@ -5,14 +5,14 @@ import FormattedDate from '../../components/FormattedDate.astro';
 import Layout from '../../layouts/Layout.astro';
 
 const posts = (await getCollection('blog')).sort(
-    (a: any, b: any) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
 
 <Layout title="Blog | UNSW DataSoc">
     <ul>
         {
-            posts.map((post: any) => ( // TODO: fix type
+            posts.map((post) => (
                 <li>
                     <a href={`/blog/${post.id}/`}>
                         {post.data.heroImage && (
