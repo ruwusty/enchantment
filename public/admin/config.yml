@@ -3,7 +3,7 @@ backend:
   repo: UNSW-Data-Soc/enchantment
   branch: main
   site_domain: https://enchantment.pages.dev
-  base_url: https://unswdata.com
+  base_url: https://enchantment.pages.dev
   auth_endpoint: /api/auth
 
 publish_mode: editorial_workflow 
