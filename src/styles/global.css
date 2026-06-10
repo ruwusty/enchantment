@@ -30,7 +30,6 @@ html, body {
 	flex-direction: column;
 }
 
-/* THIS is the key line */
 main {
 	flex: 1;
 }
