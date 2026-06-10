@@ -1,0 +1,23 @@
+name: Auto-Sync Main to Edu-Submissions
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Merge main into edu-submissions
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "actions@github.com"
+          git checkout edu-submissions
+          git merge origin/main --no-edit -X theirs
+          git push origin edu-submissions
