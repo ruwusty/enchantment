@@ -10,30 +10,33 @@ import "../styles/global.css";
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="/favicon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{Astro.props.title || "UNSW DataSoc"}</title>
   </head>
   <body>
-    <!-- Mobile Nav -->
-    <div class="lg:hidden">
-      <MobileNavbar />
+    <div class="site">
+      <!-- Mobile Nav -->
+      <div class="lg:hidden">
+        <MobileNavbar />
+      </div>
+
+      <!-- Desktop Nav -->
+      <div class="hidden lg:block fixed top-0 left-0 right-0 z-50">
+        <Navbar />
+      </div>
+
+      <!-- Spacing -->
+      <div class="h-16 lg:h-16"></div>
+
+      <!-- Page content -->
+      <main class="content">
+        <slot />
+      </main>
+
+
+      <Footer />
     </div>
-
-    <!-- Desktop Nav -->
-    <div class="hidden lg:block fixed top-0 left-0 right-0 z-50">
-      <Navbar />
-    </div>
-
-    <!-- Spacing -->
-    <div class="h-16 lg:h-16"></div>
-
-    <!-- Page content -->
-	<div>
-		<slot />
-	</div>
-
-
-    <Footer />
   </body>
 </html>

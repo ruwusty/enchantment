@@ -1,0 +1,159 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import FormattedDate from '../components/FormattedDate.astro';
+import Layout from '../layouts/Layout.astro';
+
+type Props = CollectionEntry<'blog'>['data'];
+
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+---
+
+<Layout title={title}>
+	<article>
+		<div class="hero-image">
+			{heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
+		</div>
+		<div class="prose">
+			<div class="title">
+				<div class="date">
+					<FormattedDate date={pubDate} />
+					{
+						updatedDate && (
+							<div class="last-updated-on">
+								Last updated on <FormattedDate date={updatedDate} />
+							</div>
+						)
+					}
+				</div>
+				<h1>{title}</h1>
+				<hr />
+			</div>
+			<slot />
+		</div>
+	</article>
+</Layout>
+<style>
+	main {
+		width: 100%;
+		margin: 0;
+	}
+
+	/* HERO */
+	.hero-image {
+		width: 100%;
+	}
+
+	.hero-image img {
+		display: block;
+		margin: 0 auto;
+		border-radius: 16px;
+		box-shadow: var(--box-shadow);
+	}
+
+	/* CONTENT WIDTH + TYPOGRAPHY */
+	.prose {
+		font-family: "Inter", system-ui, -apple-system, sans-serif;
+		width: 860px; /* was 720px → less skinny */
+		max-width: calc(100% - 3rem);
+		margin: auto;
+		padding: 2rem 1.5rem 3rem;
+
+		font-size: 18px;        /* bigger base text */
+		line-height: 1.75;      /* more readable */
+		color: rgb(var(--gray-dark));
+	}
+
+	/* TITLE BLOCK */
+	.title {
+		padding: 1.5rem 0;
+		text-align: center;
+		line-height: 1.2;
+	}
+
+	.title h1 {
+		font-size: 2.6rem;     /* bigger title */
+		font-weight: 700;
+		margin: 0 0 0.75rem 0;
+	}
+
+	/* DATE */
+	.date {
+		margin-bottom: 0.5rem;
+		font-size: 0.95rem;
+		color: rgb(var(--gray));
+	}
+
+	.last-updated-on {
+		font-style: italic;
+		font-size: 0.85rem;
+	}
+
+	/* PARAGRAPH SPACING */
+	:global(.prose p) {
+		margin: 1.25rem 0;
+	}
+
+	/* HEADINGS */
+	:global(.prose h2) {
+		font-size: 1.8rem;
+		margin-top: 2.5rem;
+		margin-bottom: 0.5rem;
+	}
+
+	:global(.prose h3) {
+		font-size: 1.4rem;
+		margin-top: 2rem;
+		margin-bottom: 0.25rem;
+	}
+
+	/* CODE BLOCKS */
+	:global(pre.astro-code) {
+		margin: 0.5rem 0;              /* vertical spacing */
+		padding: 1.25rem 1.5rem;    /* inner spacing */
+
+		border-radius: 14px;        /* rounded corners */
+		overflow-x: auto;
+
+		font-size: 1rem;
+		line-height: 1.6;
+
+		box-shadow: var(--box-shadow);
+	}
+
+	/* optional: slightly soften inline code */
+	:global(.prose code) {
+		padding: 0.2em 0.4em;
+		border-radius: 6px;
+		font-size: 0.9em;
+		background: lightgrey;
+	}
+
+	/* ensure code inside doesn't mess spacing */
+	:global(pre.astro-code code) {
+		background: none;
+		padding: 0;
+	}
+
+	/* IMAGES IN CONTENT */
+	:global(.prose img) {
+		display: block;
+		margin: 2.5rem auto;
+		border-radius: 12px;
+		max-width: 100%;
+		height: auto;
+	}
+
+	/* MOBILE */
+	@media (max-width: 768px) {
+		:global(.prose) {
+			width: 100%;
+			padding: 1.5rem 1rem 2rem;
+			font-size: 16px;
+		}
+
+		.title h1 {
+			font-size: 2rem;
+		}
+	}
+</style>

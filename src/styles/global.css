@@ -20,6 +20,20 @@ blockquote {
   @apply border-l-5 pl-4 font-light sm:text-xl border-gray-200 py-2;
 }
 
+html, body {
+	height: 100%;
+}
+
+.site {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	flex: 1;
+}
+
 .blur-xs {
   filter: blur(1px); /* You can adjust the pixel value for an even smaller blur */
 }
