@@ -35,33 +35,11 @@ Take gradient descent. When you prompt AI to optimise, it’ll do it. But do you
 
 Or take overfitting. The classic symptom is a validation loss that climbs while training loss keeps falling. But to actually diagnose it - to know whether you need more data, stronger regularisation, a simpler architecture, or to revisit your feature engineering - you need to understand the bias-variance tradeoff. Googling "my val loss is going up" gets you a list of possible causes. Understanding the mechanics tells you which one applies to your situation.
 
-<figure>
-
-  <img src="/blogs/overfitting.png" alt="Overfitting diagram" />
-
-  <figcaption>
-
-    Overfitting in supervised learning. Training error is shown in blue, and validation error in red, both as a function of the number of training cycles.
-
-    Gringer, \*Overfitting\*, CC BY 3.0, via Wikimedia Commons.
-
-  </figcaption>
-
-</figure>
+![](/images/blog/overfitting.png "Overfitting in supervised learning. Training error is shown in blue, and validation error in red, both as a function of the number of training cycles.")
 
 Then there’s the problem that breaks things most in production: hypothesis testing. A result that looks statistically significant isn't necessarily meaningful. You need the intuition to know when a result is real and when it's noise - understanding p-values, effect sizes, confidence intervals, and when you simply need more data. [[6]](https://careery.pro/blog/data-science-careers/how-to-become-a-data-scientist) 
 
-<figure>
-
-  <img src="/blogs/xkcd_effect_size.png" alt="xkcd comic" />
-
-  <figcaption>
-
-    Subgroup analysis is ongoing. https://xkcd.com/2755
-
-  </figcaption>
-
-</figure>
+![](/images/blog/xkcd_effect_size.png "Subgroup analysis is ongoing.")
 
 A data scientist who reports a "significant" A/B test result without checking effect size, or who doesn't account for multiple comparisons, can send an organisation down the wrong path with complete statistical cover.
 
@@ -81,11 +59,7 @@ This renders outcomes effectively random. Snowflake's director of AI infrastruct
 
 This is where a bad statistical assumption at step one becomes catastrophic. Single agents can make inconsistent decisions from fragmented data, while multi-agent systems lose coordination and propagate errors silently through the entire workflow. McKinsey found that nearly two-thirds of enterprises have experimented with agents, but fewer than 10 percent have scaled them to deliver tangible value, with data quality and faulty assumptions as the primary blocker. [[10]](https://www.mckinsey.com/capabilities/mckinsey-technology/our-insights/building-the-foundations-for-agentic-ai-at-scale)
 
-<figure>
-
-  <img src="/blogs/AgenticFoundations_Ex1.svg" alt="McKinsey figure" />
-
-</figure>
+![](/images/blog/AgenticFoundations_Ex1.svg)
 
 The skill being valued right now isn't "can you implement an agent." It's "can you reason about what happens when this system fails." That's a fundamentally statistical question.
 
