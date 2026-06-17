@@ -7,7 +7,7 @@ updatedDate: 2026-06-11T13:24:00
 heroImage: /images/blog/self-driving-car.jpg
 ---
 
-Vibe coding is a great way to make sure that nobody understands what is going on. It might fly under the radar for frontend - but in data science, that’s a liability.
+Vibe coding is a great way to make sure nobody understands what is going on. It might fly under the radar for frontend - but in data science, that’s a liability.
 
 **Coding is a commodity.**
 
@@ -35,11 +35,11 @@ Take gradient descent. When you prompt AI to optimise, it’ll do it. But do you
 
 Or take overfitting. The classic symptom is a validation loss that climbs while training loss keeps falling. But to actually diagnose it - to know whether you need more data, stronger regularisation, a simpler architecture, or to revisit your feature engineering - you need to understand the bias-variance tradeoff. Googling "my val loss is going up" gets you a list of possible causes. Understanding the mechanics tells you which one applies to your situation.
 
-![](/images/blog/overfitting.png "Overfitting in supervised learning. Training error is shown in blue, and validation error in red, both as a function of the number of training cycles.")
+![Overfitting graph](/images/blog/overfitting.png "Overfitting in supervised learning. Training error is shown in blue, and validation error in red, both as a function of the number of training cycles.")
 
 Then there’s the problem that breaks things most in production: hypothesis testing. A result that looks statistically significant isn't necessarily meaningful. You need the intuition to know when a result is real and when it's noise - understanding p-values, effect sizes, confidence intervals, and when you simply need more data. [[6]](https://careery.pro/blog/data-science-careers/how-to-become-a-data-scientist) 
 
-![](/images/blog/xkcd_effect_size.png "Subgroup analysis is ongoing.")
+![xkcd funny meta-analysis of significance](/images/blog/xkcd_effect_size.png "Subgroup analysis is ongoing.")
 
 A data scientist who reports a "significant" A/B test result without checking effect size, or who doesn't account for multiple comparisons, can send an organisation down the wrong path with complete statistical cover.
 
@@ -59,7 +59,7 @@ This renders outcomes effectively random. Snowflake's director of AI infrastruct
 
 This is where a bad statistical assumption at step one becomes catastrophic. Single agents can make inconsistent decisions from fragmented data, while multi-agent systems lose coordination and propagate errors silently through the entire workflow. McKinsey found that nearly two-thirds of enterprises have experimented with agents, but fewer than 10 percent have scaled them to deliver tangible value, with data quality and faulty assumptions as the primary blocker. [[10]](https://www.mckinsey.com/capabilities/mckinsey-technology/our-insights/building-the-foundations-for-agentic-ai-at-scale)
 
-![](/images/blog/AgenticFoundations_Ex1.svg)
+![msckinsey roadblocks to scaling ai](/images/blog/AgenticFoundations_Ex1.svg)
 
 The skill being valued right now isn't "can you implement an agent." It's "can you reason about what happens when this system fails." That's a fundamentally statistical question.
 
@@ -71,7 +71,7 @@ The maths is not the prerequisite. The maths is the edge.
 
 Vibe coding gets you to roughly 80% of a working solution. For many tasks, that's fine. But data science is a field built on making claims about the world and having people act on them. The ability to explain why a result shouldn't drive action - to push back on your own model before someone else has to - is what separates junior practitioners from senior ones. In an agentic world, wrong decisions don't just sit in a notebook. They scale automatically.
 
-Causal inference is increasingly being flagged as a highly sought-after skill [[3]](https://www.askdatadawn.com/p/how-has-the-data-science-job-market) - not because the tooling changed, but because autonomous systems need someone who can reason about whether a correlation actually means anything. The models are getting smarter. That means the problems you're being asked to solve are getting harder, the stakes are higher, and the gap between someone who can implement and someone who can reason is getting wider.
+Causal inference is increasingly being flagged as a highly sought-after skill [[3]](https://www.askdatadawn.com/p/how-has-the-data-science-job-market) - not because the tooling changed, but because autonomous systems need someone who can reason about whether a correlation actually means anything. That means the problems you're being asked to solve are getting harder, the stakes are higher, and the gap between someone who can implement and someone who can reason is getting wider.
 
 The models are getting smarter. So should you ■
 
