@@ -4,7 +4,7 @@ title: Vibe Coding Won’t Save You
 description: Why fundamentals still matter in the age of agentic AI.
 pubDate: 2026-04-12T00:00:00
 updatedDate: 2026-06-11T13:24:00
-heroImage: https://picsum.photos/id/774/1920/1280.webp
+heroImage: /images/blog/self-driving-car.jpg
 ---
 
 Vibe coding is a great way to make sure that nobody understands what is going on. It might fly under the radar for frontend - but in data science, that’s a liability.
