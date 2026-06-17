@@ -3,7 +3,7 @@ layout: blog
 title: Vibe Coding Won’t Save You
 description: Why fundamentals still matter in the age of agentic AI.
 pubDate: 2026-04-12T00:00:00
-updatedDate: 2026-06-11T13:24:00
+updatedDate: 2026-06-18T09:03
 heroImage: /images/blog/self-driving-car.jpg
 ---
 
